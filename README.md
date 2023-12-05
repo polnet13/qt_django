@@ -32,18 +32,6 @@ python manage.py migrate
 
 
 ***
-#### Qt Commands
-
-##### Convert `*.ui` files to `.py` files using `uic` command
-
-`python3 manage.py uic [file1.ui, file2.ui]`
-
-Note that leaving files blank will compile all UI files inside forms directory
-
-##### Convert `*.qrc` files to `.py` files using `rcc` 
-
-`python3 manage.py rcc [file1.ui, file2.ui]`
-
 #### Using Pyinstaller
 `python3 manage.py deploy`
 
