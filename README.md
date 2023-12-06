@@ -36,4 +36,5 @@ python manage.py migrate
 python3 manage.py deploy
 
 
- 
+# 할 일
+- git clone 했을 때 바로 사용할 수 있도록 마이그레이션 작업까지 완료하기
