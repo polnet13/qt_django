@@ -20,21 +20,6 @@ class mainWindow(QMainWindow, Ui_MainWindow): # Ui_MainWindow == rec.ui.MainWind
     def __init__(self):
         super(mainWindow, self).__init__()
         self.setupUi(self)
-        # path 설정
-        self.file_paths = []
-        self.base_dir = os.path.dirname(os.path.dirname(__file__))  
-        self.outpath = r'C:\Users\prude\OneDrive\바탕 화면\유튜브 영상' 
-        self.label.setText(self.outpath)
-        # 모든 데이터 조회
-        orm.reset_tableview(self.tableView)
-        # 테이블 정리
-        self.tableView.setColumnWidth(0, 0)  # id 안보이게
-        self.tableView.setColumnWidth(1, 400)  # id 안보이게
-        self.tableView.setColumnWidth(2, 200)  # id 안보이게
-        self.tableView.setColumnWidth(3, 100)  # id 안보이게
-        # 단축키 설정
-        self.shortcut = QShortcut(QKeySequence.Delete, self)
-        self.shortcut.activated.connect(self.shortcut_del)
     
     ##############
     ## 슬롯함수 ##

@@ -18,23 +18,20 @@ root
    └─ orm.py (장고 orm 컨트롤 코드)
 ```
 
-# 1. 모델 작성
+# ui파일 => 파이썬 파일로 변환
+untitled.ui 파일 위치에서 명령어 실행
+pyside6-uic untitled.ui -o untitled_ui.py
+
+# 0. 모델 작성
 Path: root/apps/model_setting/models.py
 
-# 2. settings.py 에서 INSTALLED_APPS 설정 추가
-git.clone 했으면 생략
-
-# 3. 모델 마이그레이션 준비 
+# 1. 모델 마이그레이션 준비 
 python manage.py makemigrations model_setting
 
-# 4. 모델 마이그레이트
+# 2. 모델 마이그레이트
 python manage.py migrate
-
 
 ***
 #### Using Pyinstaller
 python manage.py deploy
 
-
-# 할 일
-- git clone 했을 때 바로 사용할 수 있도록 마이그레이션 작업까지 완료하기
