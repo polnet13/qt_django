@@ -33,7 +33,7 @@ python manage.py migrate
 
 ***
 #### Using Pyinstaller
-python3 manage.py deploy
+python manage.py deploy
 
 
 # 할 일

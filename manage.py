@@ -222,7 +222,7 @@ def deploy():
             else:
                 hidden_imports.append(app)
 
-    cmd = "pyinstaller __main__.py "
+    cmd = "pyinstaller main.py "
     for i in hidden_imports:
         cmd += " --hidden-import "
         cmd += i

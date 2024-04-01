@@ -1,10 +1,29 @@
 from django.db import models
 
 
-class TestData(models.Model):
-    name = models.CharField(max_length=200)
-    age = models.IntegerField()
+class ConfigModel(models.Model):
+    outdir = models.CharField(max_length=200)
+    
+    
+class TubeModel(models.Model):
+    title = models.CharField(max_length=200)
+    url = models.CharField(max_length=200)
+    date = models.DateField(auto_now_add=True, blank=True, null=True)
     
     def __str__(self):
-        return f"{self.name}({self.age})"
+        return f"{self.title}({self.url})"
+    
+    
+ 
+    
+    
+
+
+
+
+    
+    
+
+    
+
     
