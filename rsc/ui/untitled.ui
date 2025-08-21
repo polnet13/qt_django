@@ -6,122 +6,239 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1302</width>
-    <height>991</height>
+    <width>1258</width>
+    <height>853</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>qt_django</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="horizontalLayoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>40</y>
-      <width>911</width>
-      <height>621</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="videoFrame">
-     <item>
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>40</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QSlider" name="playSlider">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>690</y>
-      <width>841</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="playTimer">
-    <property name="geometry">
-     <rect>
-      <x>910</x>
-      <y>690</y>
-      <width>64</width>
-      <height>15</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>00:00</string>
-    </property>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>720</y>
-      <width>163</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QToolButton" name="btn_play">
-       <property name="text">
-        <string>play</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="btn_pause">
-       <property name="text">
-        <string>pause</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QToolButton" name="btn_stop">
-       <property name="text">
-        <string>stop</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1302</width>
-     <height>26</height>
-    </rect>
+   <property name="styleSheet">
+    <string notr="true">/* 스타일은 외부 style.qss 파일에서 로드됩니다. */</string>
    </property>
-   <widget class="QMenu" name="menu">
-    <property name="title">
-     <string>비디오 열기</string>
+   <layout class="QHBoxLayout" name="horizontalLayout_main">
+    <property name="spacing">
+     <number>0</number>
     </property>
-    <addaction name="actionselect_file"/>
-   </widget>
-   <addaction name="menu"/>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="leftMenuBg">
+      <property name="minimumSize">
+       <size>
+        <width>60</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>60</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="leftMenuFrame">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalMenuLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="btn_1">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>테이블 (Ctrl+1)</string>
+            </property>
+            <property name="text">
+             <string>테이블</string>
+            </property>
+            <property name="shortcut">
+             <string>Ctrl+1</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_2">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>리스트 및 검색</string>
+            </property>
+            <property name="text">
+             <string>검색</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_settings">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>설정</string>
+            </property>
+            <property name="text">
+             <string>⚙️</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_center" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_center">
+       <property name="leftMargin">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>10</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="page_table">
+          <layout class="QVBoxLayout" name="verticalLayout_page1">
+           <item>
+            <widget class="QTableView" name="tableView"/>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_list_search">
+          <layout class="QVBoxLayout" name="verticalLayout_page2">
+           <item>
+            <widget class="QFrame" name="frame_search">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <item>
+               <widget class="QLineEdit" name="lineEdit_search">
+                <property name="placeholderText">
+                 <string>검색어를 입력하세요...</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_search">
+                <property name="text">
+                 <string>검색</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QListView" name="listView"/>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionselect_file">
-   <property name="text">
-    <string>select file</string>
-   </property>
-  </action>
  </widget>
  <resources/>
  <connections/>

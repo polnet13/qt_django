@@ -1,5 +1,4 @@
 from apps.model_setting.models import ConfigModel, TubeModel
-import yt_dlp
 from PySide6.QtGui import QStandardItemModel, QStandardItem
 import pandas as pd
 from django.core import serializers
@@ -71,13 +70,9 @@ def df_to_qmodel(df):
 
 
 
-################################################################
-##  유튜브 관련
-################################################################
+ 
 def get_video_title(url):
-    with yt_dlp.YoutubeDL() as ydl:
-        info_dict = ydl.extract_info(url, download=False)
-        video_title = info_dict.get('title', None)
+    video_title = "test"
     return video_title
 
 

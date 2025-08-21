@@ -1,77 +1,57 @@
-/* QMainWindow {
-    background-color:#f80202;
-}  */
-QFrame {
-    border-width: 1px;
+/* style.qss */
+
+/* 전체적인 기본 스타일 */
+QWidget {
+    background-color: #2c313c;
+    color: #c5c5c5;
+    border: none;
+    font-size: 10pt;
+    font-family: "Segoe UI";
 }
 
-
-/* QLabel {
-    color:#333333;
-    font-size: 20px;
-    padding:10px;
+/* 버튼 기본 스타일 */
+QPushButton {
+    background-color: #343b48;
     border-radius: 5px;
-    background-color:#E0E0E0;
-} */
-
-QLineEdit { 
-    background-color: rgb(71, 71, 67);
-    color: #0a0a0a;
+    padding: 8px;
+}
+QPushButton:hover {
+    background-color: #3d4554;
+}
+QPushButton:pressed {
+    background-color: #2c313c;
 }
 
-/* 그냥 냅뒀을 때 */
-QLineEdit:active { 
-    color: #51923e;
-}
-
-/* 입력할 때 */
-QLineEdit:focus {
+/* 특정 버튼(objectName이 btn_search일 경우) 스타일 */
+QPushButton#btn_search {
+    background-color: #568af2;
     color: #ffffff;
-
+    font-weight: bold;
+}
+QPushButton#btn_search:hover {
+    background-color: #6a9cff;
 }
 
-QLineEdit:disabled {
-    color: #daff08;
+
+/* 입력창 스타일 */
+QLineEdit {
+    background-color: #2c313c;
+    border: 2px solid #343b48;
+    border-radius: 8px;
+    padding: 8px;
+}
+QLineEdit:focus {
+    border: 2px solid #568af2;
 }
 
-
-
-/* QMenu {
-    font-size: 16px;
-    font-family: "Microsoft YaHei UI";
-    font-weight: light;
-    color:white;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    border-style: solid;
-    border-width: 0px;
-    border-color: rgba(255, 255, 255, 255);
-    border-radius: 3px;
-    background-color: rgba(200, 200, 200,50);
-} */
-
-/* QPushButton {
-    background-color: rgb(209, 187, 187);
+/* 테이블 뷰 스타일 */
+QTableView {
+    background-color: #2c313c;
+    gridline-color: #444a59;
     border-radius: 10px;
-    border-style: outset;
-    border-width: 1px;
-    border-color: beige;
-    font: bold 14px;
-    min-width: 5em;
-    padding: 6px;
-} */
-
-/* QPushButton:pressed {
-    background-color: rgb(165, 149, 149);
-    border-style: inset;
-} */
-
-/* apply_stylesheet(app, theme=theme[1], invert_secondary=False, extra=extra)
-base = os.path.dirname(__file__)
-css_path = os.path.join(base, 'rsc', 'theme.css')
-# 커스텀 css 읽어서 기존 시트와 합치기
-stylesheet = app.styleSheet()
-with open(css_path, encoding='utf-8') as file:
-    app.setStyleSheet(stylesheet + file.read().format(**os.environ))
+}
+QHeaderView::section {
+    background-color: #343b48;
+    padding: 5px;
+    border: 1px solid #444a59;
+}

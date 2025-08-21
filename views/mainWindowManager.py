@@ -8,7 +8,7 @@ from PySide6.QtGui import QKeySequence, QShortcut
 
 import pandas as pd
 import os
-from views.control import orm, tube, hangle
+from views.control import orm 
 import time
 # from views.control import hangle
 
@@ -20,19 +20,21 @@ class mainWindow(QMainWindow, Ui_MainWindow): # Ui_MainWindow == rec.ui.MainWind
     def __init__(self):
         super(mainWindow, self).__init__()
         self.setupUi(self)
+
+        # 시그널과 슬롯 연결
+        self.btn_1.clicked.connect(self.slot_btn1)
+        self.btn_2.clicked.connect(self.slot_btn2)
     
     ##############
     ## 슬롯함수 ##
     ##############
-    def slot_tubedown(self):
-        # 다운로드 안되면 작업경로 변경해서 다운하면 됨
-        pass
+    def slot_btn1(self):
+        self.stackedWidget.setCurrentIndex(0)
 
-    def slot_outpath(self):
-        # path = 경로가져 오기
-        # self.outpath = path
-        # self.label.setText(self.outpath)
-        pass
+    def slot_btn2(self):
+        self.stackedWidget.setCurrentIndex(1)
+
+
 
     def slot_delete(self):
         rows = orm.get_selected_pk(self.tableView)
@@ -42,8 +44,6 @@ class mainWindow(QMainWindow, Ui_MainWindow): # Ui_MainWindow == rec.ui.MainWind
         url = self.lineEdit.text()
         try:
             orm.create_tube(url, self.tableView)
-            tube.get_video(url, self.outpath)
-            tube.getWebSubtitle(f"https://downsub.com/?url={url}")
         except Exception as e:
             self.statusbar.showMessage(str(e)[:50], timeout=3000)
         
